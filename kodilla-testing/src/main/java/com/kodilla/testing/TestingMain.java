@@ -15,7 +15,7 @@ public class TestingMain {
             System.out.println("Error!");
         }
         //Testing Calculator class
-        Calculator calculator = new Calculator(5,5); // musiałem tu coś wpisać bo się nie kompilowało
+        Calculator calculator = new Calculator(); // musiałem tu coś wpisać bo się nie kompilowało
 
         int add = calculator.add(180, 19);
         int subtract = calculator.subtract(200, 150);
