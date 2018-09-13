@@ -1,68 +1,64 @@
 package com.kodilla.testing.collection;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class CollectionTestSuite {
 
-    ArrayList<Integer> normalArrayList = new ArrayList<Integer>();
-    ArrayList<Integer> oddArrayExtract = new ArrayList<Integer>();
-    ArrayList<Integer> emptyArrayList = new ArrayList<Integer>();
-
-
+    private static OddNumbersExterminator oddNumbersExterminator;
     @Before
     public void before(){
         System.out.println("Test Case: begin");
     }
+
     @After
     public void after(){
         System.out.println("Test Case: end");
     }
-    @Test
-    public void testOddNumbersExterminatorEmptyList(){
 
-        System.out.println("---- empty arrayList size: " + emptyArrayList.size());
-        System.out.println("---- normal arrayList size: " + normalArrayList.size());
-
-        OddNumbersExterminator completedList = new OddNumbersExterminator(emptyArrayList);
-        completedList.exterminate(emptyArrayList);
-        System.out.println("---- empty arrayList size: " + emptyArrayList.size());
-        System.out.println("---- normal arrayList size: " + normalArrayList.size());
-
-        Assert.assertEquals(normalArrayList, emptyArrayList);
+    @BeforeClass
+    public static void beforeClass(){
+        oddNumbersExterminator = new OddNumbersExterminator();
     }
 
     @Test
-    public void testOddNumbersExterminatorNormalList() {
+    public void testOddNumbersExterminatorEmptyList(){
+        //Given
 
-        Random randomNumber = new Random();
-        for (int i=0; i<50; i++) {
-            normalArrayList.add(randomNumber.nextInt((int) Math.pow(2, 31) - 1));
-            if (normalArrayList.get(i) % 2 == 0) {
-                oddArrayExtract.add(normalArrayList.get(i));
-            }
-            System.out.println(normalArrayList.get(i));
-        }
-        System.out.println("---- list generation completed ---- arrayList size: " + normalArrayList.size());
+        ArrayList<Integer> emptyList = new ArrayList<>();
+        //When
+        List<Integer> resultList = oddNumbersExterminator.exterminate(emptyList);
+        System.out.println("Testing empty list");
+        //Then
+        Assert.assertEquals(emptyList, resultList);
 
-        OddNumbersExterminator completedList = new OddNumbersExterminator(normalArrayList);
-        completedList.exterminate(normalArrayList);
+    }
 
-        for (Object i : normalArrayList) {
-            System.out.println(i.toString());
-        }
-        System.out.println("---- list odd numbers extermination completed ---- arrayList size: " + completedList.size());
+    @Test
+    public void testOddNumbersExterminatorNormalList(){
+        //Given
+        ArrayList<Integer> normalList = new ArrayList<>();
+        normalList.add(1);
+        normalList.add(2);
+        normalList.add(5);
+        normalList.add(2);
+        normalList.add(1);
+        normalList.add(4);
+        normalList.add(10);
 
-        for (Object i : oddArrayExtract) {
-            System.out.println(i.toString());
-        }
-        System.out.println("---- list of even numbers extract ---- arrayList size: " + oddArrayExtract.size());
+        ArrayList<Integer>expectedResultList = new ArrayList<>();
+        expectedResultList.add(2);
+        expectedResultList.add(2);
+        expectedResultList.add(4);
+        expectedResultList.add(10);
+        //When
+        List<Integer> resultList = oddNumbersExterminator.exterminate(normalList);
+        System.out.println("Testing normal list");
+        //Then
+        Assert.assertEquals(expectedResultList, resultList);
 
-        Assert.assertEquals(oddArrayExtract, normalArrayList);
     }
 }
