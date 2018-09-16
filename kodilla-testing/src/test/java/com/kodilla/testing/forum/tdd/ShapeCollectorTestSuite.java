@@ -4,7 +4,6 @@ import com.kodilla.testing.ShapeCollector.*;
 import org.junit.*;
 
 public class ShapeCollectorTestSuite {
-    ShapeCollector testFigure;
 
     @Before
     public void before() {
@@ -39,22 +38,13 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testRemoveFigure() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        shapeCollector.addFigure(new Square(4.0));
+        Shape shape = new Square(4.0);
+        shapeCollector.addFigure(shape);
 
-        Shape shape = shapeCollector.getFigure(0);
-        shapeCollector.removeFigure(shape);
+       boolean result = shapeCollector.removeFigure(shape);
 
-   //     Shape shape = new Square(4.0);
-   //     testFigure.removeFigure(shape);
-   //     shapeCollector.addFigure(new Square(4.0));
-   //     Shape shape = new Square(4.0);
-   //     shapeCollector.addFigure(new Square(4.0));
-   //     shapeCollector.removeFigure(new Square(4.0));
+        Assert.assertTrue(result);
 
-       Shape shape1 = shapeCollector.removeFigure(shape);  // nie mogę sobie poradzić z usówaniem figury
-
-        Assert.assertEquals(true, shape1);
-    //    Assert.assertEquals(true, result);
         Assert.assertEquals(0,shapeCollector.getShapesList().size());
     }
     @Test

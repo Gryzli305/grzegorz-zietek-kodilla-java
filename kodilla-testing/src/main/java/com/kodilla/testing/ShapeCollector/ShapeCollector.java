@@ -36,13 +36,13 @@ public class ShapeCollector {
     public void addFigure(Shape shape) {
         shapesList.add(shape);
     }
-    public Shape removeFigure(Shape shape) {
-        boolean result = false;
+    public boolean removeFigure(Shape shape) {
+         boolean result = false;
         if (shapesList.contains(shape)) {
             shapesList.remove(shape);
             result = true;
         }
-        return shape;
+        return result;
     }
     public Shape getFigure(int n) {
         Shape shape = shapesList.get(n);
