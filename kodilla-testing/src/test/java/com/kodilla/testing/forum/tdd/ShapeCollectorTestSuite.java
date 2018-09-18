@@ -44,7 +44,6 @@ public class ShapeCollectorTestSuite {
        boolean result = shapeCollector.removeFigure(shape);
 
         Assert.assertTrue(result);
-
         Assert.assertEquals(0,shapeCollector.getShapesList().size());
     }
     @Test
