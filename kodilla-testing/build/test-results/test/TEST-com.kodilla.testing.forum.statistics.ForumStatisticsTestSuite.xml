@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-09-22T18:29:53" hostname="DESKTOP-N7VICJ9" time="0.114">
+<testsuite name="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-09-22T18:31:58" hostname="DESKTOP-N7VICJ9" time="0.115">
   <properties/>
-  <testcase name="testCalculateAdvStatisticsMoreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.11"/>
-  <testcase name="testCalculateAdvStatisticsWithHundredUsers" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.0"/>
-  <testcase name="testCalculateAdvStatisticsLessCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testCalculateAdvStatisticsMoreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.111"/>
+  <testcase name="testCalculateAdvStatisticsWithHundredUsers" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testCalculateAdvStatisticsLessCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.0"/>
   <testcase name="testCalculateAdvStatisticsWithZeroComments" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.0"/>
   <testcase name="testCalculateAdvStatisticsWithZeroPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
   <testcase name="testCalculateAdvStatisticsWithZeroUsers" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.0"/>

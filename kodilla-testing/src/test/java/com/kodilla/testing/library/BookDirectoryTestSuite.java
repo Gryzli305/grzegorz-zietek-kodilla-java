@@ -93,7 +93,7 @@ public class BookDirectoryTestSuite {
         @Test
         public void emptyListBooksInHandsOf () {
         //Given
-        LibraryUser libraryUser = new LibraryUser("Grzechu" , "Ziętek", "854");
+        LibraryUser libraryUser = new LibraryUser("firstname" , "Lastname", "854");
             LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
             BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
             List<Book> mockResult = new ArrayList<>();
@@ -127,7 +127,7 @@ public class BookDirectoryTestSuite {
     @Test
     public void fiveResult () {
         //Given
-        LibraryUser libraryUser = new LibraryUser("Grzechu" , "Ziętek", "854");
+        LibraryUser libraryUser = new LibraryUser("firstname" , "Lastname", "854");
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> mockResult = new ArrayList<>();
