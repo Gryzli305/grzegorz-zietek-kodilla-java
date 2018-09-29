@@ -10,7 +10,7 @@ public class ForumUser {
     private LinkedList<ForumComment> comments = new LinkedList<ForumComment>();
 
     public ForumUser(String name, String realName) {
-        //name visible on forum
+        //name visible on com.kodilla.stream.forum
         this.name = name;
         //real name of the user
         this.realName = realName;
