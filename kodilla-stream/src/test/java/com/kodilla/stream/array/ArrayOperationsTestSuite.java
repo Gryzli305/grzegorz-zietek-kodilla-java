@@ -3,6 +3,8 @@ package com.kodilla.stream.array;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class ArrayOperationsTestSuite {
     @Test
     public void testGetAverage() {
@@ -13,5 +15,13 @@ public class ArrayOperationsTestSuite {
         double average = ArrayOperations.getAverage(numbers);
 
         Assert.assertEquals(averageExpected,average, 0.01);
+    }
+    @Test
+    public void testEmptyArray() {
+
+        int numbers [] = {};
+
+        Assert.assertEquals(0,numbers.length);
+
     }
 }

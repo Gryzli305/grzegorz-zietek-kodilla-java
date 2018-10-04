@@ -6,4 +6,5 @@ include 'module3'
 include 'module4'
 include 'stream'
 include 'kodilla-stream'
+include 'kodilla-rps'
 
