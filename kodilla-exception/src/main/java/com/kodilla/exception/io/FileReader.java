@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class FileReader {
 
-    public void readFile() {
+    public void readFile() throws FileReaderException {
 
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource("file/names.txt").getFile());
@@ -22,9 +22,9 @@ public class FileReader {
 
         } catch (IOException e) {
             System.out.println("nie jest ok " +e);
-
+            throw new FileReaderException();
         } finally {
-            System.out.println("jestem tu ");
+            System.out.println("Program dalej jest uruchomiony");
         }
     }
 }
