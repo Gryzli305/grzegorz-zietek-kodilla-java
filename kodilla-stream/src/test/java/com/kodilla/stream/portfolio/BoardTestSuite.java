@@ -165,6 +165,8 @@ public class BoardTestSuite {
                 .orElse(0);
 
 
+
+
         //Then
         Assert.assertEquals(10.0, average, 0.01);
         Assert.assertEquals(10.0, avg, 0.01);
