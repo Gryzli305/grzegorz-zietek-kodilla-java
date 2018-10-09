@@ -10,10 +10,6 @@ public class RpsRunner {
         int roundGame;
         boolean end = false;
 
-
-
-
-
         while (end == false) {
             System.out.print("Podaj imie: ");
             Scanner scanner = new Scanner(System.in);
