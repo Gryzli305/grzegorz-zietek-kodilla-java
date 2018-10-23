@@ -10,7 +10,7 @@ import java.util.Set;
 public class TestSuit {
 
     @Test
-    public void test() {
+    public void testFindByFlightCity() {
         Set<Flight> flights = new HashSet<>();
 
         Flight flight1 = new Flight("WAR", "GDA");
@@ -31,7 +31,7 @@ public class TestSuit {
     }
 
     @Test
-    public void test2() {
+    public void testFindToFlightCity() {
         Set<Flight> flights = new HashSet<>();
 
         Flight flight1 = new Flight("WAR", "GDA");
@@ -52,7 +52,7 @@ public class TestSuit {
     }
 
     @Test
-    public void test3() {
+    public void testFindFromFlightCity() {
         Set<Flight> flights = new HashSet<>();
 
         Flight flight1 = new Flight("WAR", "GDA");
