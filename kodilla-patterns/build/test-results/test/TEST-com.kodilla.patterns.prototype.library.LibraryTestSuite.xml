@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-04T00:20:27" hostname="DESKTOP-N7VICJ9" time="0.004">
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-04T22:02:06" hostname="DESKTOP-N7VICJ9" time="0.007">
   <properties/>
-  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.004"/>
-  <system-out><![CDATA[Library{name='possible to borrow', books=[Book{title='Sonety krymskie', author='Adam Mickiewicz', publicationDate=1825-08-06}, Book{title='Pan Tadeusz', author='Adam Mickiewicz', publicationDate=1834-06-28}, Book{title='Dziady', author='Adam Mickiewicz', publicationDate=1822-08-06}]}
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.007"/>
+  <system-out><![CDATA[Library{name='possible to borrow', books=[Book{title='Dziady', author='Adam Mickiewicz', publicationDate=1822-08-06}, Book{title='Sonety krymskie', author='Adam Mickiewicz', publicationDate=1825-08-06}, Book{title='Pan Tadeusz', author='Adam Mickiewicz', publicationDate=1834-06-28}]}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
