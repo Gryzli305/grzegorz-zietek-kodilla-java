@@ -1,7 +1,6 @@
 package com.kodilla.patterns.factory.tasks;
 
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TaskFactoryTestSuite {
@@ -11,9 +10,7 @@ public class TaskFactoryTestSuite {
     @Test
     public void testFactoryDriving() {
 
-        Task driving = factory.makeTask(TaskFactory.DRIVING,
-                "order88", "London", "car");
-
+        Task driving = factory.makeTask(TaskFactory.DRIVING, "order88", "London", "car");
 
         Assert.assertEquals("order88", driving.getTaskName());
         Assert.assertFalse(driving.isTaskExecuted());
