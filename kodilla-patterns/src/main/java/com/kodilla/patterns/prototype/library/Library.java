@@ -1,11 +1,13 @@
 package com.kodilla.patterns.prototype.library;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public final class Library implements Cloneable {
     private String name;
-    private Set<Book> books = new HashSet<>();
+    private List<Book> books = new ArrayList<>();
 
     public Library(final String name) {
         this.name = name;
@@ -19,7 +21,7 @@ public final class Library implements Cloneable {
         this.name = name;
     }
 
-    public Set<Book> getBooks() {
+    public List<Book> getBooks() {
         return books;
     }
 
@@ -30,8 +32,11 @@ public final class Library implements Cloneable {
     public boolean removeBook(Book book) {
         return books.remove(book);
     }
+    public Book removeBook(int index) {
+        return books.remove(index);
+    }
 
-    public void setBooks(Set<Book> books) {
+    public void setBooks(List<Book> books) {
         this.books = books;
     }
 
@@ -50,7 +55,7 @@ public final class Library implements Cloneable {
     public Library deepCopy() throws CloneNotSupportedException {
         Library clonedLibrary = (Library) super.clone();
 
-        clonedLibrary.setBooks(new HashSet<>());
+        clonedLibrary.setBooks(new ArrayList<>());
 
         for (Book book : getBooks()) {
             clonedLibrary.addBook(new Book(book.getTitle(), book.getAuthor(), book.getPublicationDate()));

@@ -22,6 +22,8 @@ public class LibraryTestSuite {
         library.addBook(book3);
         library.addBook(book4);
 
+    //    library.addBook(new Book("ddd","ff",LocalDate.of(2008,4,3)));
+
         Library clonedLibrary = null;
 
         try {
@@ -41,7 +43,8 @@ public class LibraryTestSuite {
             System.out.println(e);
         }
 
-        library.removeBook(book1);
+     //   library.removeBook(book1);
+        library.removeBook(0);
 
         System.out.println(library.toString());
 
