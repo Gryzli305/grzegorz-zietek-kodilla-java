@@ -68,7 +68,7 @@ public class RpsRunner {
     public static Score drawScore() {
         Random random = new Random();
         int number = random.nextInt();
-        number = number % 5;
+        number = number % 4;
         number = number + 1;
         if (number == 1) {
             return Score.EVEN;
@@ -82,7 +82,7 @@ public class RpsRunner {
         Random random = new Random();
 
         int number = random.nextInt();
-        number = number % 4;
+        number = number % 7;
         number = number + 1;
         if (number == 1) {
             return Symbol.ROCK;
