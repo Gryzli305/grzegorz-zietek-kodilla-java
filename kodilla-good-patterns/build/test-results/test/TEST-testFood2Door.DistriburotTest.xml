@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testFood2Door.DistriburotTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-10-23T21:04:32" hostname="DESKTOP-N7VICJ9" time="0.006">
+<testsuite name="testFood2Door.DistriburotTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-11-29T19:31:49" hostname="DESKTOP-N7VICJ9" time="0.006">
   <properties/>
-  <testcase name="testOrder" classname="testFood2Door.DistriburotTest" time="0.006"/>
+  <testcase name="testOrder" classname="testFood2Door.DistriburotTest" time="0.005"/>
   <testcase name="testAddNewDistributor" classname="testFood2Door.DistriburotTest" time="0.0"/>
   <system-out><![CDATA[Actual Distibutor
 [Distributor{nameCompany='ExtraFoodShop', product='Extra Fish', quantity=150}, Distributor{nameCompany='HealthyShop', product='Healthy Bread', quantity=100}, Distributor{nameCompany='GlutenFreeShop', product='Water Free Gluten ', quantity=250}]

@@ -13,19 +13,22 @@ public class RpsRunner {
 
         Scanner scanner = new Scanner(System.in);
         name = scanner.nextLine();
-            System.out.print("Podaj liczbę rund: ");
+        System.out.print("Podaj liczbę rund: ");
 
-              roundGame = scanner.nextInt();
-              scanner.nextLine();
+        roundGame = scanner.nextInt();
+        scanner.nextLine();
+
 
         while (end == false && roundGame > 0) {
-            roundGame = roundGame -1;
+            roundGame = roundGame - 1;
 
-            System.out.println("\nZapoznaj się z instrukcją obsługi: klawisz 1 - zagranie \"kamień\",\n" +
-                    "klawisz 2 - zagranie \"papier\",\n" +
-                    "klawisz 3 - zagranie \"nożyce\",\n" +
-                    "klawisz x - zakończenie gry.\n" +
-                    "klawisz n - uruchomienie gry od nowa\n");
+            System.out.println("\nZapoznaj się z instrukcją obsługi: wybierz 1 - zagranie \"kamień\",\n" +
+                    "wybierz 2 - zagranie \"papier\",\n" +
+                    "wybierz 3 - zagranie \"nożyce\",\n" +
+                    "wybierz 4 - zagranie \"jaszczurka\",\n" +
+                    "wybierz 5 - zagranie \"Spock\",\n" +
+                    "wybierz x - zakończenie gry.\n" +
+                    "wybierz n - uruchomienie gry od nowa\n");
             String action = scanner.nextLine();
 
             if (action.equals("x")) {
@@ -38,30 +41,48 @@ public class RpsRunner {
 
             Symbol computer;
 
-            if (action.equals("1")) {
-                computer = generateSymbol();
-                Score score = calculateScore(Symbol.ROCK,computer);
-                printScore(score);
-            }
+            Score score = drawScore();
+            printScore(score);
 
-            if (action.equals("2")) {
-                computer = generateSymbol();
-                Score score = calculateScore(Symbol.PAPER,computer);
-                printScore(score);
-            }
-
-            if (action.equals("3")) {
-                computer = generateSymbol();
-                Score score = calculateScore(Symbol.SCISSORS,computer);
-                printScore(score);
-            }
+//            if (action.equals("1")) {
+//                computer = generateSymbol();
+//                Score score = calculateScore(Symbol.ROCK, computer);
+//                printScore(score);
+//            }
+//
+//            if (action.equals("2")) {
+//                computer = generateSymbol();
+//                Score score = calculateScore(Symbol.PAPER, computer);
+//                printScore(score);
+//            }
+//
+//            if (action.equals("3")) {
+//                computer = generateSymbol();
+//                Score score = calculateScore(Symbol.SCISSORS, computer);
+//                printScore(score);
+//            }
         }
+
     }
+
+    public static Score drawScore() {
+        Random random = new Random();
+        int number = random.nextInt();
+        number = number % 5;
+        number = number + 1;
+        if (number == 1) {
+            return Score.EVEN;
+        } else if (number == 2) {
+            return Score.WIN;
+        }
+        return Score.LOSE;
+    }
+
     public static Symbol generateSymbol() {
         Random random = new Random();
 
         int number = random.nextInt();
-        number = number % 3;
+        number = number % 4;
         number = number + 1;
         if (number == 1) {
             return Symbol.ROCK;
@@ -69,8 +90,15 @@ public class RpsRunner {
         if (number == 2) {
             return Symbol.PAPER;
         }
+        if (number == 3) {
+            return Symbol.LIZARD;
+        }
+        if (number == 4) {
+            return Symbol.SPOCK;
+        }
         return Symbol.SCISSORS;
     }
+
     public static Score calculateScore(Symbol player, Symbol computer) {
         if (player == computer) {
             return Score.EVEN;
@@ -98,13 +126,64 @@ public class RpsRunner {
                 return Score.WIN;
             }
         }
+
+
+        if (player == Symbol.ROCK) {
+            if (computer == Symbol.SPOCK) {
+                return Score.LOSE;
+            } else {
+                return Score.WIN;
+            }
+        }
+        if (player == Symbol.SPOCK) {
+            if (computer == Symbol.PAPER) {
+                return Score.LOSE;
+            } else {
+                return Score.WIN;
+            }
+        }
+        if (player == Symbol.PAPER) {
+            if (computer == Symbol.LIZARD) {
+                return Score.LOSE;
+            } else {
+                return Score.WIN;
+            }
+        }
+        if (player == Symbol.LIZARD) {
+            if (computer == Symbol.SCISSORS) {
+                return Score.LOSE;
+            } else {
+                return Score.WIN;
+            }
+        }
+        if (player == Symbol.SCISSORS) {
+            if (computer == Symbol.SPOCK) {
+                return Score.LOSE;
+            } else {
+                return Score.WIN;
+            }
+        }
+        if (player == Symbol.SPOCK) {
+            if (computer == Symbol.LIZARD) {
+                return Score.LOSE;
+            } else {
+                return Score.WIN;
+            }
+        }
+        if (player == Symbol.LIZARD) {
+            if (computer == Symbol.ROCK) {
+                return Score.LOSE;
+            } else {
+                return Score.WIN;
+            }
+        }
         return Score.EVEN;
     }
+
     public static void printScore(Score score) {
         if (Score.WIN == score) {
             System.out.println("you win");
-        }
-        else if (Score.LOSE == score) {
+        } else if (Score.LOSE == score) {
             System.out.println("you lose");
         } else {
             System.out.println("no one wins");
