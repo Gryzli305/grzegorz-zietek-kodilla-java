@@ -30,20 +30,24 @@ public class RpsRunner {
                     "wybierz n - uruchomienie gry od nowa\n");
             String action = scanner.nextLine();
 
-            int i = Integer.parseInt(action);
-            if (i < 0 || i > 5) {
-                System.out.println("Błędna wartość");
-                continue;
-            }
-
             if (action.equals("x")) {
                 end = true;
-            }
-
-            if (action.equals("n")) {
+            } else if (action.equals("n")) {
                 continue;
-            }
+            } else {
+                if (isNumeric(action)) {
+                    int i = Integer.parseInt(action);
 
+                    if (i < 1 || i > 5) {
+
+                        System.out.println("Błędna wartość");
+                        continue;
+                    }
+                } else {
+                    System.out.println("Błędna wartość");
+                    continue;
+                }
+            }
             Symbol computer;
 
             Score score = drawScore();
@@ -79,6 +83,15 @@ public class RpsRunner {
 //            }
         }
 
+    }
+
+    public static boolean isNumeric(String str) {
+        try {
+            int d = Integer.parseInt(str);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
     }
 
     public static Score drawScore() {
