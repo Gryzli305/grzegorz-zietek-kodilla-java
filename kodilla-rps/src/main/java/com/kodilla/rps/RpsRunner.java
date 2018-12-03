@@ -18,7 +18,6 @@ public class RpsRunner {
         roundGame = scanner.nextInt();
         scanner.nextLine();
 
-
         while (end == false && roundGame > 0) {
             roundGame = roundGame - 1;
 
@@ -30,6 +29,12 @@ public class RpsRunner {
                     "wybierz x - zakończenie gry.\n" +
                     "wybierz n - uruchomienie gry od nowa\n");
             String action = scanner.nextLine();
+
+            int i = Integer.parseInt(action);
+            if (i < 0 || i > 5) {
+                System.out.println("Błędna wartość");
+                continue;
+            }
 
             if (action.equals("x")) {
                 end = true;
@@ -59,6 +64,17 @@ public class RpsRunner {
 //            if (action.equals("3")) {
 //                computer = generateSymbol();
 //                Score score = calculateScore(Symbol.SCISSORS, computer);
+//                printScore(score);
+//            }
+//            if (action.equals("4")) {
+//                computer = generateSymbol();
+//                Score score = calculateScore(Symbol.LIZARD, computer);
+//                printScore(score);
+//            }
+//
+//            if (action.equals("5")) {
+//                computer = generateSymbol();
+//                Score score = calculateScore(Symbol.SPOCK, computer);
 //                printScore(score);
 //            }
         }
