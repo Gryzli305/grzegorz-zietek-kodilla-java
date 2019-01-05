@@ -5,16 +5,16 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-//@NamedNativeQuery(
-//        name = "Company.retrieveCompanyNameLike",
-//        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%', :NAME , '%')",
-//        resultClass = Company.class
-//)
-@NamedQuery(
+@NamedNativeQuery(
         name = "Company.retriveCompanyFirstLetter",
-        query = "FROM COMPANIES WHERE COMPANY_NAME LIKE '%name%' NAME"
-
+        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT( :NAME , '%')",
+        resultClass = Company.class
 )
+//@NamedQuery(
+//        name = "Company.retriveCompanyFirstLetter",
+//        query = "FROM Company WHERE Name LIKE '%name%' NAME"
+//
+//)
 
 
 @Entity
