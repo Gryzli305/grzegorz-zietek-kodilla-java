@@ -57,7 +57,7 @@ public class CompanyEmployeeSearchFacadeTest {
         resultEmployeeList.add(johnSmith);
         resultEmployeeList.add(lindaSmith);
 
-        List<Company> queryResult = companyDao.retriveCompanyFirstLetter("sof");
+        List<Company> queryResult = companyEmployeeSearchFacade.retrieveCompanyLike("sof");
 
         Assert.assertEquals(resultEmployeeList.size(), queryResult.size());
 

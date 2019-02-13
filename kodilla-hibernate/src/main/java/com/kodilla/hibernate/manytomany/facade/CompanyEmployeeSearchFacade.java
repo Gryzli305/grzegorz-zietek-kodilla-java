@@ -17,9 +17,9 @@ public final class CompanyEmployeeSearchFacade {
     @Autowired
     private EmployeeDao employeeDao;
 
-//    public List<Company> retrieveCompanyLike(String fragmentOfTheName) {
-//        return companyDao.retrieveCompanyNameLike(fragmentOfTheName);
-//    }
+    public List<Company> retrieveCompanyLike(String fragmentOfTheName) {
+        return companyDao.retrieveCompanyNameLike(fragmentOfTheName);
+    }
 
     public List<Employee> retrieveEmployeeLike(String fragmentOfTheName){
         return employeeDao.retrieveEmployeeLike(fragmentOfTheName);
