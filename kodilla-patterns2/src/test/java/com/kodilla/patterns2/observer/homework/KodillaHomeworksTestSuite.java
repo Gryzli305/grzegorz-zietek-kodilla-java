@@ -10,7 +10,7 @@ public class KodillaHomeworksTestSuite {
     public void testUpdate() {
 
         Student kowal = new Student("Ted Kowalski", KodillaCourse.Java_Developer);
-        Student nowalk = new Student("Jaś Wędowniczek", KodillaCourse.Java_Developer);
+        Student nowalk = new Student("Jaś Wędrowniczek", KodillaCourse.Java_Developer);
         Student trump = new Student("Daffy Trump", KodillaCourse.Web_Developer);
 
         Mentor ml = new Mentor("ML");
