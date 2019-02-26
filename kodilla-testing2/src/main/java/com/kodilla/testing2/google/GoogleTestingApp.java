@@ -6,16 +6,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class GoogleTestingApp {
-    public static final String SEARCHFIELD = "gh-ac";
+    public static final String SEARCHFIELD = "gsr";
 
     public static void main(String[] args) {
 
 
-        WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.FIREFOX);
+        WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driver.get("https://www.google.com");
 
         WebElement searchField = driver.findElement(By.id(SEARCHFIELD));
-        searchField.sendKeys("Laptop");
+        searchField.sendKeys("Kodilla");
         searchField.submit();
     }
 }
