@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.loop.TestLoopAndConditionalBreakpoints" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-26T18:09:46" hostname="DESKTOP-N7VICJ9" time="0.031">
+<testsuite name="com.kodilla.testing.loop.TestLoopAndConditionalBreakpoints" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-27T17:41:16" hostname="DESKTOP-N7VICJ9" time="0.023">
   <properties/>
-  <testcase name="testLoop" classname="com.kodilla.testing.loop.TestLoopAndConditionalBreakpoints" time="0.031"/>
+  <testcase name="testLoop" classname="com.kodilla.testing.loop.TestLoopAndConditionalBreakpoints" time="0.023"/>
   <system-out><![CDATA[[0] Sum equals: 0
 [1] Sum equals: 1
 [2] Sum equals: 3
