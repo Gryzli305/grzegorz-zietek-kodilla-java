@@ -23,7 +23,7 @@ public class CrudAppTestSuite {
 
     @Before
     public void initTests() {
-        driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
+        driver = WebDriverConfig.getDriver(WebDriverConfig.FIREFOX);
         driver.get(BASE_URL);
         generator = new Random();
     }
@@ -103,8 +103,8 @@ public class CrudAppTestSuite {
         WebDriver driverTrello = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driverTrello.get(TRELLO_URL);
 
-        driverTrello.findElement(By.id("user")).sendKeys("user");
-        driverTrello.findElement(By.id("password")).sendKeys("password");
+        driverTrello.findElement(By.id("user")).sendKeys("gzietek@tlen.pl");
+        driverTrello.findElement(By.id("password")).sendKeys("Fryzjer@2020");
         driverTrello.findElement(By.id("login")).submit();
 
         Thread.sleep(2000);
@@ -120,6 +120,11 @@ public class CrudAppTestSuite {
         final WebDriverWait webDriverWait = new WebDriverWait(driverTrello, 10);
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span")));
 
+        driverTrello.findElements(By.xpath("//a[@class = \"board-tile\"]")).stream()
+                .filter(aHref -> aHref.getText().equals("Kodilla Application"))
+                .forEach(aHref -> aHref.click());
+
+        Thread.sleep(2000);
 
         result = driverTrello.findElements(By.xpath("//span[@class=\"list-card-title js-card-name\"]")).stream()
                 .filter(theSpan -> theSpan.getText().contains(taskName))

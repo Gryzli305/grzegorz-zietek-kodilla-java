@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing2.crudapp.CrudAppTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-27T19:42:22" hostname="DESKTOP-N7VICJ9" time="32.43">
+  <properties/>
+  <testcase name="shouldCreateTrelloCard" classname="com.kodilla.testing2.crudapp.CrudAppTestSuite" time="32.43"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1551296544021	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "D:\\TEMP\\rust_mozprofile.TLAkXtDmN5z3"
+1551296544393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551296544393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551296546215	Marionette	INFO	Listening on port 62980
+1551296546283	Marionette	WARN	TLS certificate errors will be ignored for this session
+lut 27, 2019 8:42:26 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38) on port 37930
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+lut 27, 2019 8:42:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+1551296574320	Marionette	INFO	Stopped listening on port 62980
+[Parent 8180, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 11596, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 11596, Chrome_ChildThread] WARNING: pipe e[[Parent 8180, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 15412, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 15412, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 14644, Chrome_ChildThread]
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+]]></system-err>
+</testsuite>

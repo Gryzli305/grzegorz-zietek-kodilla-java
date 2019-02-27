@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.book.BookTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-02-27T17:41:15" hostname="DESKTOP-N7VICJ9" time="0.007">
+<testsuite name="com.kodilla.stream.book.BookTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-02-27T19:42:20" hostname="DESKTOP-N7VICJ9" time="0.007">
   <properties/>
   <testcase name="testGetListUsingFor" classname="com.kodilla.stream.book.BookTestSuite" time="0.001"/>
   <testcase name="testGetListUsingLongStream" classname="com.kodilla.stream.book.BookTestSuite" time="0.004"/>
